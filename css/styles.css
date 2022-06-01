@@ -739,7 +739,68 @@ justify-content: center;
 .join-link:focus{
     background-color: var(--button-background-color);
 }
+.subscription{
+    display: block;
+    margin-left: 95px;
+}
+.subscribe-us{
+    font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--rare-white-text-color);
+margin-bottom: 20px;
+}
+.footer-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email-input{
+    width: 358px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 15px;
+    background: var(--secondary-background-color);
+    border-radius: 4px;
+    border: 1px solid var(--secondary-text-color);
+    outline: 0px;
+}
+.email-input::placeholder{
+    font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+letter-spacing: 0.03em;
+color: var(--secondary-text-color);
+}
+.footer-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: var(--button-background-color);
+    border-radius: 4px;
+    border: transparent;
+}
+.footer-subscription{
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.87;
+letter-spacing: 0.06em;
+color: var(--rare-white-text-color);
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.icon-send{
+    margin-left: 10px;
+}
 /* -----модалка----- */
 
 .backdrop.is-hidden {
