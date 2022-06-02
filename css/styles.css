@@ -847,9 +847,9 @@ justify-content: center;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    min-width: 528px;
-    min-height: 581px;
-    padding: 17px;
+    width: 528px;
+    height: 581px;
+    padding: 40px;
 
     background-color: var(--primary-background-color);
 
@@ -882,6 +882,12 @@ justify-content: center;
 .close-button:focus {
     border-color: var(--button-bg) ;
 }
+.window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .callback{
 font-weight: 700;
 font-size: 20px;
@@ -890,7 +896,6 @@ text-align: center;
 letter-spacing: 0.03em;
 color: var(--main-text-color);
 text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-margin-bottom: 25px;
 }
 
 .modal-form{
@@ -902,13 +907,14 @@ margin-bottom: 25px;
 .form-label{
     position: relative;
     display: block;
-    margin-bottom: 25px;
+    margin-top: 25px;
 }
 .modal-icon{
     position: absolute;
     top: 50%;
     left: 13px;
-    transform: translateY(-50%);   
+    transform: translateY(-50%);  
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .form-input{
@@ -919,7 +925,10 @@ margin-bottom: 25px;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus~.modal-icon{
-    fill: #2196F3;
+    fill: var(--button-background-color);
+}
+.form-input:hover~.modal-icon{
+    fill: var(--button-background-color);
 }
 .form-input:hover,
 .form-input:focus{
@@ -935,6 +944,8 @@ margin-bottom: 25px;
 .field-type{
     position: absolute;
     top: -17px;
+    left: 0%;
+    transform: translateY(-50%%);
     display: inline-block;
     margin-bottom: 5px;
 
@@ -961,9 +972,10 @@ margin-bottom: 25px;
 }
 .checkbox-label{
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
-    margin: 20px 50px 30px 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 .agreement-text{
     font-weight: 400;
@@ -995,9 +1007,10 @@ color: var(--button-color);
     background-color: var(--button-background-color);
     border: transparent;
     border-radius: 4px;
+    
     margin-left: 164px;
     margin-right: 164px;
-    transition: background 1250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 .send-button:hover,
 .send-button:focus{
