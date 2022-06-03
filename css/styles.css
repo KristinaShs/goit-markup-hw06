@@ -767,6 +767,7 @@ margin-bottom: 20px;
     border-radius: 4px;
     border: 1px solid var(--secondary-text-color);
     outline: 0px;
+    color: var(--rare-white-text-color);
     transition:box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -849,7 +850,7 @@ justify-content: center;
     border-radius: 4px;
 
     width: 528px;
-    height: 581px;
+    min-height: 581px;
     padding: 40px;
 
     background-color: var(--primary-background-color);
@@ -914,6 +915,8 @@ margin-bottom: 12px;
     display: block;
     margin-bottom: 10px;
 }
+
+
 .modal-icon{
     position: absolute;
     top: 70%;
@@ -949,7 +952,6 @@ margin-bottom: 12px;
 }
 
 .field-type{
-    /* position: absolute; */
     top: -17px;
     left: 0%;
     transform: translateY(-50%);
@@ -983,19 +985,74 @@ margin-bottom: 12px;
     letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
 }
+.checkbox-input{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
 .checkbox-label{
+    position:relative;
     display: flex;
-    align-items: baseline;
-    justify-content: center;
-    margin-top: 20px;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
+/* .checkbox-label:hover .custom-checkbox{
+    border-color: var(--button-background-color);
+} */
+
+.checkbox-input:checked + .check-icon{
+opacity: 1;
+background-color: var(--button-background-color);
+transform: translateY(25%); 
+}
+
+.check-icon{
+position: absolute;
+top: 0;
+left: 0;
+
+border-radius: 2px;
+width: 16px;
+height: 15px;
+transform: scale(0.2);
+opacity: 0;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}
+.custom-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(25%); 
+
+    display: block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--active-focus-color);
+    border-radius: 2px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:hover ~ .custom-checkbox,
+.checkbox-input:focus ~ .custom-checkbox{
+    border-color: var(--button-background-color);
+}
+
 .agreement-text{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    margin-left: 30px;
 }
 .agreement-link{
     color: var(--link-text-color);
@@ -1032,3 +1089,6 @@ color: var(--button-color);
 .send-button{
     cursor: pointer;
 }
+
+
+
