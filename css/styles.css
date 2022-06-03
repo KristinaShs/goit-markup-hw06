@@ -520,13 +520,12 @@ margin-bottom: 10px;
 .button-list{
     margin-bottom: 50px;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus{
     background: var(--button-background-color);
     color: var(--button-color);
 }
-.btn:focus {
-    color: var(--button-background-color);
-}
+
 .btn:active {
     color: var(--button-background-color);
 }
@@ -554,6 +553,10 @@ color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 /* ...............PICTURES................... */
+.card-link:focus .project-info,
+.card-link:hover .project-info {
+transform: translateY(0);
+}
  .image-list{
     display: flex;
     flex-wrap: wrap;
@@ -1023,7 +1026,7 @@ left: 0;
 border-radius: 2px;
 width: 16px;
 height: 15px;
-transform: scale(0.2);
+transform: translateY(25%);
 opacity: 0;
 transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
@@ -1045,7 +1048,9 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-be
 .checkbox-input:focus ~ .custom-checkbox{
     border-color: var(--button-background-color);
 }
-
+.checkbox-input:checked ~ .custom-checkbox{
+    border-color: var(--button-background-color);
+}
 .agreement-text{
     font-weight: 400;
     font-size: 14px;
